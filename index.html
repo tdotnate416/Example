@@ -1,105 +1,198 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <script type="text/javascript" src="d3/d3.js"></script>
-    <script type="text/javascript" src="d3/d3.geom.js"></script>
-    <script type="text/javascript" src="d3/d3.layout.js"></script>
-    <link type="text/css" rel="stylesheet" href="style.css"/>
-    <style type="text/css">
+<html lang="en">
 
-circle {
-  stroke: #000;
-  stroke-opacity: .5;
-}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <!-- CSS Section -->
+    <link rel="stylesheet" href="Scripts/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Scripts/lib/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="Scripts/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Content/app.css">
+    <title>COMP125 Xavier Thomas-Bowen (300701821)- MidTerm Exam</title>
+</head>
 
-    </style>
-  </head>
-  <body>
-    <div id="body">
-      <div id="footer">
-        Collision Detection
-        <div class="hint">move the mouse to repel nodes</div>
-      </div>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <nav class="navbar navbar-inverse  navbar-fixed-top" data-spy="affix" data-offset-top="197">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><i class="fa fa-globe fa-lg"></i></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="reportLink" class="active"><a href="#MainTitle">Report</a></li>
+                    <li id="contactLink"><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- MAIN CONTENT SECTION -->
+    <main class="container" id="mainContent">
+        <h1 id="MainTitle" class="col-lg-offset-1 col-lg-10">The Travel Report</h1>
+        <h4 class="col-lg-offset-1 col-lg-10">body copy and image credits: Sophie-Claire Hoeller</h4>
+        <article id="9Islands" class="row">
+            <h2 class="col-md-offset-1 col-md-10 col-xs-offset-1 col-xs-10">9 Gorgeous Greek islands</h2>
+            <p id="IntroParagraph" class="col-md-4 col-xs-offset-1 col-xs-10">
+                <!-- Inject your IntroParagraph here -->
+            </p>
+            <img class="col-md-6 col-xs-offset-1  col-xs-10" src="Assets/images/milos-greece-colorful-houses.jpg" alt="Milos Greece colorful houses">
+        </article>
+        <hr>
+
+        <section class="row">
+            <p class="col-md-12 col-xs-offset-1 col-xs-10">Here are 9 incredible Greek islands you may not have heard of, but should have on your radar.</p>
+        </section>
+
+        <article class="row">
+            <h2 class="col-md-10 col-xs-offset-1 col-xs-10">Folegandros</h2>
+            <img class="col-md-10 col-xs-offset-1 col-xs-10" src="Assets/images/folegandros.jpg" alt="Folegandros">
+            <p class="col-md-10 col-xs-offset-1 col-xs-10" id="Folegandros">
+                <!-- Inject your Folegandros paragraph here -->
+            </p>
+        </article>
+        <hr>
+
+        <article class="row">
+            <h2 class="col-md-10 col-xs-offset-1 col-xs-10">Alonissos</h2>
+            <img class="col-md-10 col-xs-offset-1 col-xs-10" src="Assets/images/alonissos.jpg" alt="Alonissos">
+            <p class="col-md-10 col-xs-offset-1 col-xs-10" id="Alonissos">
+                <!-- Inject your Alonissos paragraph here -->
+            </p>
+        </article>
+        <hr>
+
+        <article class="row">
+            <h2 class="col-md-10 col-xs-offset-1 col-xs-10">Spetses</h2>
+            <img class="col-md-10 col-xs-offset-1 col-xs-10" src="Assets/images/spetses.jpg" alt="Spetses">
+            <p class="col-md-10 col-xs-offset-1 col-xs-10" id="Spetses">
+                <!-- Inject your Spetses paragraph here -->
+            </p>
+        </article>
+        <hr>
+
+        <article class="row">
+            <h2 class="col-md-10 col-xs-offset-1 col-xs-10">Amorgos</h2>
+            <img class="col-md-10 col-xs-offset-1 col-xs-10" src="Assets/images/amorgos.jpg" alt="Amorgos">
+            <p class="col-md-10 col-xs-offset-1 col-xs-10" id="Amorgos">
+                <!-- Inject your Amorgos paragraph here -->
+            </p>
+        </article>
+        <hr>
+
+        <article class="row">
+            <h2 class="col-md-10 col-xs-offset-1 col-xs-10">Syros</h2>
+            <img class="col-md-10 col-xs-offset-1 col-xs-10" src="Assets/images/syros.jpg" alt="Syros">
+            <p class="col-md-10 col-xs-offset-1 col-xs-10" id="Syros">
+                <!-- Inject your Syros paragraph here -->
+            </p>
+        </article>
+        <hr>
+
+        <article class="row">
+            <h2 class="col-md-10 col-xs-offset-1 col-xs-10">Milos</h2>
+            <img class="col-md-10 col-xs-offset-1 col-xs-10" src="Assets/images/milos.jpg" alt="Milos">
+            <p class="col-md-10 col-xs-offset-1 col-xs-10" id="Milos">
+                <!-- Inject your Milos paragraph here -->
+            </p>
+        </article>
+        <hr>
+
+        <article class="row">
+            <h2 class="col-md-10 col-xs-offset-1 col-xs-10">Hydra</h2>
+            <img class="col-md-10 col-xs-offset-1 col-xs-10" src="Assets/images/hydra.jpg" alt="Hydra">
+            <p class="col-md-10 col-xs-offset-1 col-xs-10" id="Hydra">
+                <!-- Inject your Hydra paragraph here -->
+            </p>
+        </article>
+        <hr>
+
+
+        <article class="row">
+            <h2 class="col-md-10 col-xs-offset-1 col-xs-10">Ithaca</h2>
+            <img class="col-md-10 col-xs-offset-1 col-xs-10" src="Assets/images/ithaca.jpg" alt="Ithaca">
+            <p class="col-md-10 col-xs-offset-1 col-xs-10" id="Ithaca">
+                <!-- Inject your Ithaca paragraph here -->
+            </p>
+        </article>
+        <hr>
+
+        <article class="row">
+            <h2 class="col-md-10 col-xs-offset-1 col-xs-10">Gavdos</h2>
+            <img class="col-md-10 col-xs-offset-1 col-xs-10" src="Assets/images/gavdos.jpg" alt="Gavdos">
+            <p class="col-md-10 col-xs-offset-1 col-xs-10" id="Gavdos">
+                <!-- Inject your Gavdos paragraph here -->
+            </p>
+        </article>
+        <hr>
+    </main>
+
+    <!-- CONTACT SECTION -->
+    <div class="container">
+        <section id="contact" class="row">
+
+            <div class="col-md-offset-2 col-md-8 col-xs-offset-1 col-xs-10">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Contact Us</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form id="contactForm" class="form">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="email">Contact Number</label>
+                                <input type="tel" class="form-control" id="contactNumber" name="email" placeholder="Contact Number" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="email">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="comments">Your Message</label>
+                                <textarea class="form-control" rows="5" id="yourMessage" name="comments" placeholder="Enter Your Comments Here" required></textarea>
+                            </div>
+                            <div class="text-right">
+                                <button id="sendButton" type="submit" class="btn btn-primary">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-    <script type="text/javascript">
 
-var w = 1280,
-    h = 800;
+    <!-- FOOTER SECTION -->
+    <div class="container">
+        <footer class="row">
+            <h4>&copy; Copyright 2016 - The Travel Report</h4>
+        </footer>
+    </div>
 
-var nodes = d3.range(200).map(function() { return {radius: Math.random() * 12 + 4}; }),
-    color = d3.scale.category10();
+    <!-- JavaScript Section -->
+    <script src="Scripts/lib/jquery/dist/jquery.min.js"></script>
+    <script src="Scripts/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="Scripts/app.js"></script>
+</body>
 
-var force = d3.layout.force()
-    .gravity(0.05)
-    .charge(function(d, i) { return i ? 0 : -2000; })
-    .nodes(nodes)
-    .size([w, h]);
-
-var root = nodes[0];
-root.radius = 0;
-root.fixed = true;
-
-force.start();
-
-var svg = d3.select("#body").append("svg:svg")
-    .attr("width", w)
-    .attr("height", h);
-
-svg.selectAll("circle")
-    .data(nodes.slice(1))
-  .enter().append("svg:circle")
-    .attr("r", function(d) { return d.radius - 2; })
-    .style("fill", function(d, i) { return color(i % 3); });
-
-force.on("tick", function(e) {
-  var q = d3.geom.quadtree(nodes),
-      i = 0,
-      n = nodes.length;
-
-  while (++i < n) {
-    q.visit(collide(nodes[i]));
-  }
-
-  svg.selectAll("circle")
-      .attr("cx", function(d) { return d.x; })
-      .attr("cy", function(d) { return d.y; });
-});
-
-svg.on("mousemove", function() {
-  var p1 = d3.svg.mouse(this);
-  root.px = p1[0];
-  root.py = p1[1];
-  force.resume();
-});
-
-function collide(node) {
-  var r = node.radius + 16,
-      nx1 = node.x - r,
-      nx2 = node.x + r,
-      ny1 = node.y - r,
-      ny2 = node.y + r;
-  return function(quad, x1, y1, x2, y2) {
-    if (quad.point && (quad.point !== node)) {
-      var x = node.x - quad.point.x,
-          y = node.y - quad.point.y,
-          l = Math.sqrt(x * x + y * y),
-          r = node.radius + quad.point.radius;
-      if (l < r) {
-        l = (l - r) / l * .5;
-        node.x -= x *= l;
-        node.y -= y *= l;
-        quad.point.x += x;
-        quad.point.y += y;
-      }
-    }
-    return x1 > nx2
-        || x2 < nx1
-        || y1 > ny2
-        || y2 < ny1;
-  };
-}
-
-    </script>
-  </body>
 </html>
